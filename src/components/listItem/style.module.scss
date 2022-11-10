@@ -1,0 +1,31 @@
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fed8ab;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+
+    .listItemBlock {
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        p{
+            font-size: 22px;
+            color: rgb(19,19,19);
+           
+        }
+        h2{
+            color: rgb(81 81 81);
+          
+        }
+        
+        .false{
+            text-decoration:line-through;
+
+         }
+   
+    }
+ 
+}

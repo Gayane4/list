@@ -1,0 +1,85 @@
+// .App{
+//     position: fixed;
+//     top: 0%;
+//     left: 0%;
+//     right: 0%;
+//     bottom: 0%;
+//     width: 100vh;
+//     height: 100vh;
+//     background-color: rgba(61, 61, 61, 0.5);
+//   z-index: -1;
+// }
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(61, 61, 61, 0.8);
+    opacity: 1;
+    // z-index: -1;
+}
+.addContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: #fff;
+    padding-top: 30px ;
+    text-align: center;
+    h3{
+      font-size: 20px;
+      color: rgb(81,81,81);
+      padding: 10px;
+    }
+    input{
+      width: 250px;
+      height: 30px;
+      margin: 15px 40px;
+      background-color: antiquewhite;
+      border: none;
+      border-radius: 10px;
+
+    }
+    input:focus{
+      outline: none;
+    }
+    .button{
+      display: flex;
+  
+      button{
+        border: none;
+        height: 30px;
+        width: 60px;
+        background-color:#fed8ab;
+        color: #fff;
+        margin: 10px 5px 0px 5px;
+      }
+    }
+}
+//  .body {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     display: none;
+//     background: rgba(0, 0, 0, 0.5);
+// }
+
+// .addContainer {
+//     min-width: 200px;
+//     min-height: 50px;
+//     border-radius: 20px;
+//     padding: 20px;
+//     background-color: #fff;
+// }
+
+// .body.active {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
