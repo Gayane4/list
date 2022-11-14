@@ -4,8 +4,16 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Button from '../button/Button'
 import style from './../button/style.module.scss'
 
-const EditTools = ({ details, setDetails, setEdit, value, setValue, id, saveItem }) => {
-
+const EditTools = ({ details, setDetails, setEdit, value, setValue, id }) => {
+    function saveItem(id) {
+        setDetails(details.map(item => {
+            if (item.id === id) {
+                item.title = value
+            }
+            return item
+        }))
+        setEdit('')
+    }
     function noChangeItem(id) {
         details.map(item => {
             if (item.id === id) {
@@ -18,7 +26,7 @@ const EditTools = ({ details, setDetails, setEdit, value, setValue, id, saveItem
 
     return (
         <div className={style.buttons}>
-            <Button onClick={saveItem}><FontAwesomeIcon icon={faCheck} /></Button>
+            <Button onClick={() => saveItem(id)}><FontAwesomeIcon icon={faCheck} /></Button>
             <Button onClick={() => noChangeItem(id)} >X</Button>
         </div>
 

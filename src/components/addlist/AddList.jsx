@@ -17,14 +17,17 @@ const AddList = ({ details, setDetails, setShowAdd }) => {
   }
   function cancel() {
     setShowAdd(false)
-
-
+  }
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      addItem()
+    }
   }
   return (
     <div onClick={cancel} className={style.background}>
       <div onClick={(e) => e.stopPropagation()} className={style.addContainer}>
         <h3>Add new post</h3>
-        <Input value={title} onChange={(e) => setTitle(e.target.value)} />
+        <Input onKeyDown={(e) => handleKeyDown(e)} value={title} onChange={(e) => setTitle(e.target.value)} />
         <div className={style.button}>
           <Button onClick={addItem}>Save</Button>
           <Button onClick={cancel}>Cancel</Button>
