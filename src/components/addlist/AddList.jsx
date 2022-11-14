@@ -15,20 +15,21 @@ const AddList = ({ details, setDetails, setShowAdd }) => {
     setDetails([...details, newItem])
     setShowAdd(false)
   }
-  function cancel(){
+  function cancel() {
     setShowAdd(false)
+
 
   }
   return (
-    <div className={style.background}>
-      <div className={style.addContainer}>
+    <div onClick={cancel} className={style.background}>
+      <div onClick={(e) => e.stopPropagation()} className={style.addContainer}>
         <h3>Add new post</h3>
         <Input value={title} onChange={(e) => setTitle(e.target.value)} />
         <div className={style.button}>
-        <Button onClick={addItem}>Save</Button>
-        <Button onClick={cancel}>Cancel</Button>
+          <Button onClick={addItem}>Save</Button>
+          <Button onClick={cancel}>Cancel</Button>
         </div>
-       
+
       </div>
     </div>
 

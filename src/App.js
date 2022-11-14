@@ -20,7 +20,7 @@ function App() {
     setTimeout(() => {
       fetching()
       .finally(()=>setIsLoading(false))
-    }, 5000)
+    }, 3000)
 
   }, [])
 
